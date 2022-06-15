@@ -21,7 +21,7 @@ const Navbar = () => {
             <li className={classes.navLink} key={el.id}>
               <NavLink
                 to={el.path}
-                className={({ isActive }) => (isActive ? 'active-style' : 'none')}
+                className={({ isActive }) => (isActive ? classes.active : classes.deactive)}
               >
                 {el.name}
               </NavLink>

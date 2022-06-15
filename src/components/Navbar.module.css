@@ -16,12 +16,19 @@
   margin-right: 2rem;
 }
 
-.navLink > a {
-  text-decoration: none;
+.navLink>a {
   color: rgb(8, 136, 187);
   font-size: 25px;
   text-transform: capitalize;
   letter-spacing: 1px;
+}
+
+.deactive {
+  text-decoration: none;
+}
+
+.active {
+  text-decoration: underline;
 }
 
 .logo {
