@@ -1,0 +1,41 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  margin: 4rem 2rem;
+  border-bottom: 2px solid grey;
+  padding-bottom: 2.5rem;
+}
+
+.navLinks {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+  list-style: none;
+  margin-right: 2rem;
+}
+
+.navLink > a {
+  text-decoration: none;
+  color: rgb(8, 136, 187);
+  font-size: 25px;
+  text-transform: capitalize;
+  letter-spacing: 1px;
+}
+
+.logo {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 2rem;
+  gap: 20px;
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.logoImage {
+  height: 100%;
+  width: auto;
+}

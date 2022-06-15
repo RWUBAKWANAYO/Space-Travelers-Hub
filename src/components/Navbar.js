@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
+import classes from './Navbar.module.css';
 
 const Navbar = () => {
   const navLinks = [
@@ -9,11 +10,23 @@ const Navbar = () => {
     { name: 'My Profile', path: '/myprofile', id: '3' },
   ];
   return (
-    <nav>
-      <img src={logo} alt="logo" />
+    <nav className={classes.navbar}>
+      <div className={classes.logo}>
+        <img className={classes.logoImage} src={logo} alt="logo" />
+        <p> Space Travelers Hub </p>
+      </div>
       <div>
-        <ul>
-          {navLinks.map((el) => <li key={el.id}><NavLink to={el.path} className={({ isActive }) => (isActive ? 'active-style' : 'none')}>{el.name}</NavLink></li>)}
+        <ul className={classes.navLinks}>
+          {navLinks.map((el) => (
+            <li className={classes.navLink} key={el.id}>
+              <NavLink
+                to={el.path}
+                className={({ isActive }) => (isActive ? 'active-style' : 'none')}
+              >
+                {el.name}
+              </NavLink>
+            </li>
+          ))}
         </ul>
       </div>
     </nav>

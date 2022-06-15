@@ -1,0 +1,41 @@
+.rocketRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 360px;
+}
+
+.rocketImage {
+  height: 100%;
+  width: 500px;
+}
+
+.rocketsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 4rem;
+  margin-right: 2rem;
+}
+
+.rocketName {
+  font-size: 40px;
+  margin-top: 0;
+}
+
+.rocketParagraph {
+  font-size: 25px;
+  line-height: 40px;
+}
+
+.reserveBtn {
+  height: 60px;
+  width: 30%;
+  color: #fff;
+  background-color: rgb(8, 136, 187);
+  border: none;
+  border-radius: 5px;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+}
