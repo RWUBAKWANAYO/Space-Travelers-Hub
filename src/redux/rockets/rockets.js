@@ -17,6 +17,7 @@ const rocketsReducer = (state = rockets, action) => {
           id: rocket.id,
           name: rocket.rocket_name,
           image: rocket.flickr_images,
+          description: rocket.description,
           type: rocket.rocket_type,
           active: false,
         }));
