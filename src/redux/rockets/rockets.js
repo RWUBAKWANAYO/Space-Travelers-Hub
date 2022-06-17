@@ -12,7 +12,14 @@ export const FetchRocketsHandler = () => async (dispatch) => {
 const rocketsReducer = (state = rockets, action) => {
   switch (action.type) {
     case FETCH_ROCKETS:
-      return action.payload.map((rocket) => ({ ...rocket, active: false }));
+      return action.payload.map((rocket) => (
+        {
+          id: rocket.id,
+          name: rocket.rocket_name,
+          image: rocket.flickr_images,
+          type: rocket.rocket_type,
+          active: false,
+        }));
 
     default: return state;
   }
