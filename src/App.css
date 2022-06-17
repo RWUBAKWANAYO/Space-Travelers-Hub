@@ -10,9 +10,9 @@ body {
 .activeButton {
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
   background-color: transparent;
-  border: 3px solid #ff0000;
+  border: 3px solid #f00;
   border-radius: 5px;
-  color: #ff0000;
+  color: #f00;
   padding: 10px;
   text-align: center;
   font-size: 22px;
@@ -27,7 +27,6 @@ body {
   text-align: center;
   font-size: 22px;
 }
-
 
 .activeBadge {
   font-family: "Quicksand", Arial, Helvetica, sans-serif;
