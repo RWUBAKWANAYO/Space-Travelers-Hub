@@ -20,6 +20,8 @@ const Rockets = () => {
           <div>
             <h2 className={classes.rocketName}>{el.name}</h2>
             <p className={classes.rocketParagraph}>
+              {el.active ? <span className={classes.reserved}>Reserved</span> : null}
+              {' '}
               {el.description}
             </p>
             <button
