@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500&display=swap');
+
+body {
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.rocketRow {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  height: 360px;
+}
+
+.rocketImage {
+  height: 100%;
+  width: 500px;
+}
+
+.rocketsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  margin-left: 4rem;
+  margin-right: 2rem;
+  margin-bottom: 50px;
+  margin-top: 50px;
+}
+
+.rocketName {
+  font-size: 32px;
+  margin-top: 0;
+}
+
+.rocketParagraph {
+  font-size: 22px;
+  line-height: 40px;
+}
+
+.reserveBtnBlue {
+  height: 60px;
+  width: 30%;
+  color: #fff;
+  background-color: #1e90ff;
+  border: none;
+  border-radius: 7px;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.cancelBtnGrey {
+  height: 60px;
+  width: 35%;
+  color: #808080;
+  background-color: transparent;
+  border: 2px solid #808080;
+  border-radius: 5px;
+  font-size: 23px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.reserved {
+  background-color: #00bfff;
+  color: #fff;
+  border-radius: 7px;
+  text-align: center;
+  padding: 5px;
+  font-weight: 900;
+  font-size: 18px;
+  letter-spacing: 0.7px;
+}
