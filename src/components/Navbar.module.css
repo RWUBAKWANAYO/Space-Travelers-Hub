@@ -16,7 +16,7 @@
   margin-right: 2rem;
 }
 
-.navLink>a {
+.navLink > a {
   color: rgb(8, 136, 187);
   font-size: 25px;
   text-transform: capitalize;
