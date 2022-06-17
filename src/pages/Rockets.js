@@ -1,6 +1,6 @@
 import { React, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux/es/exports';
-import { FetchRocketsHandler } from '../redux/rockets/rockets';
+import { FetchRocketsHandler, ReservationHandler } from '../redux/rockets/rockets';
 import classes from './Rockets.module.css';
 
 const Rockets = () => {
@@ -9,6 +9,7 @@ const Rockets = () => {
   useEffect(() => {
     if (!rockets.length)dispatch(FetchRocketsHandler());
   }, []);
+  const handleReserve = (id) => dispatch(ReservationHandler(id));
   return (
     <div className={classes.rocketsColumn}>
       {rockets.map((el) => (
@@ -23,9 +24,10 @@ const Rockets = () => {
             </p>
             <button
               type="button"
-              className="reserveBtnBlue"
+              className={el.active ? `${classes.cancelBtnGrey}` : `${classes.reserveBtnBlue}`}
+              onClick={() => handleReserve(el.id)}
             >
-              Reserve Rocket
+              {el.active ? 'Cancel Reservation' : 'Reserve Rocket'}
 
             </button>
           </div>
