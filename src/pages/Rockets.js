@@ -1,16 +1,36 @@
 import { React, useEffect } from 'react';
-import { useDispatch } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux/es/exports';
 import { FetchRocketsHandler } from '../redux/rockets/rockets';
+import classes from './Rockets.module.css';
 
 const Rockets = () => {
   const dispatch = useDispatch();
+  const rockets = useSelector((state) => state.rocketsReducer);
   useEffect(() => {
-    dispatch(FetchRocketsHandler());
+    if (!rockets.length)dispatch(FetchRocketsHandler());
   }, []);
   return (
-    <div>
-      <h1 key={Math.random()}>Rockets</h1>
-      <button type="button">Click</button>
+    <div className={classes.rocketsColumn}>
+      {rockets.map((el) => (
+        <div key={el.id} className={classes.rocketRow}>
+          <div>
+            <img className={classes.rocketImage} src={el.image} alt="rocket" />
+          </div>
+          <div>
+            <h2 className={classes.rocketName}>{el.name}</h2>
+            <p className={classes.rocketParagraph}>
+              {el.description}
+            </p>
+            <button
+              type="button"
+              className="reserveBtnBlue"
+            >
+              Reserve Rocket
+
+            </button>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
